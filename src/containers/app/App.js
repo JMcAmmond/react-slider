@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from '../../components/slider';
+import { Header, Card, Container } from './styles';
 
 export default function App() {
 
@@ -7,7 +8,7 @@ export default function App() {
         const arr = [];
         for(let i=0; i<5; i++) {
             arr.push(
-                <div style={styles.card}>
+                <Card>
                     <h2>Slider Content</h2>
                     <p>This tutorial will teach you how to create a SCSS only responsive
                     slider. Feel free to read the whole tutorial or just download and
@@ -16,7 +17,7 @@ export default function App() {
                     slider. Feel free to read the whole tutorial or just download and
                     try it by yourself.</p>
                     <a target="__blank" href="https://www.google.ca">A link inside the slider</a>
-                </div>
+                </Card>
             )
         }
         return arr;
@@ -24,31 +25,13 @@ export default function App() {
 
     return (
         <div className="App">
-            <h1 style={styles.header}>React Slider</h1>
-            <div style={styles.container}>
+            <Header>React Slider</Header>
+            <Container>
                 <Slider
                     slides={renderSlides()}
                     sliderWidth={'600px'}
                 />
-            </div>
+            </Container>
         </div>
     );
-}
-
-const styles = {
-    header: {
-        textAlign: 'center',
-        color: '#fff',
-    },
-    card: {
-        position: 'relative',
-        display: 'block',
-        borderRadius: '8px',
-        background: '#FFF',
-        padding: '40px',
-        boxShadow: '0 5px 20px 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.1)',
-    },
-    container: {
-        margin: '2rem 0'
-    }
 }
