@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SliderRadio from '../../components/slider-radio';
 import SliderBullets from '../../components/slider-bullets';
 import SliderHolder from '../../components/slider-holder';
+import { Slider as SliderContainer } from './styles';
 
 export default class Slider extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ export default class Slider extends Component {
         const { slides, showBullets, activeColor, inactiveColor, sliderWidth } = this.props;
 
         return slides.length ? (
-            <div className="slider">
+            <SliderContainer className="slider">
                 <SliderRadio 
                     count={slides.length} 
                     selectedIndex={this.state.selectedIndex}
@@ -42,7 +43,7 @@ export default class Slider extends Component {
                         selectedIndex={this.state.selectedIndex}
                     />
                 )}
-            </div>
+            </SliderContainer>
         ) : null
     }
 }
