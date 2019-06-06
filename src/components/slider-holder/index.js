@@ -6,16 +6,16 @@ export default function SliderHolder(props) {
     return (
         <SlideHolder className="slider__holder" maxWidth={sliderWidth}>
             {slides.map((slide, key) => {
-                const main = key === selectedIndex;
+                const distance = Math.abs(key - selectedIndex);
                 const direction = key < selectedIndex 
-                    ? `left-${Math.abs(key - selectedIndex)}` 
-                    : `right-${Math.abs(key - selectedIndex)}`;
+                    ? `left` 
+                    : `right`;
 
                 return (
                     <Slide 
                         htmlFor={`slide-${key}`} 
                         className={`slider__item slider__item--${key}`} 
-                        main={main}
+                        distance={distance}
                         direction={direction}
                     >
                         {slide}
