@@ -8,6 +8,7 @@ export default function SliderBullets(props) {
     for(let i=0; i<count; i++) {
         items.push(
             <Bullet
+                key={i}
                 htmlFor={`slide-${i}`} 
                 className={`bullets__item bullets__item--${i}`}
                 checked={i === selectedIndex}

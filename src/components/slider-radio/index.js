@@ -7,6 +7,7 @@ export default function SliderRadio(props) {
     for(let i=0; i<count; i++){
         items.push(
             <input 
+                key={i}
                 type="radio"
                 name="slider"
                 id={`slide-${i}`}

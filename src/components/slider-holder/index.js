@@ -13,6 +13,7 @@ export default function SliderHolder(props) {
 
                 return (
                     <Slide 
+                        key={key}
                         htmlFor={`slide-${key}`} 
                         className={`slider__item slider__item--${key}`} 
                         distance={distance}
