@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import SliderRadio from '../../components/slider-radio';
-import SliderBullets from '../../components/slider-bullets';
-import SliderHolder from '../../components/slider-holder';
+import SliderRadio from './slider-radio';
+import SliderBullets from './slider-bullets';
+import SliderHolder from './slider-holder';
 import { Slider as SliderContainer } from './styles';
 
 export default class Slider extends Component {
